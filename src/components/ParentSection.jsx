@@ -4,22 +4,29 @@ import CardComponent from "../components/ui/Cardcomponents";
 const ParentSection = ({ title, items = [], type }) => {
   if (!items.length) return null;
 
+  // Slice items according to type
+  const displayedItems = type === "shop" ? items.slice(0, 3) : type === "blog" ? items.slice(0, 4) : items;
+
+  // Calculate grid columns dynamically
+  const gridColsClass = `grid-cols-1 sm:grid-cols-2 md:grid-cols-${displayedItems.length}`;
+
   return (
     <div className="max-w-7xl mx-auto py-10 px-4">
       {title && <h2 className="text-2xl font-semibold mb-6">{title}</h2>}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {items.map((item) => (
+      <div className={`grid ${gridColsClass} gap-6 justify-center`}>
+        {displayedItems.map((item) => (
           <CardComponent
-            key={item.id}
+            key={item.id || item.name}
             name={item.name}
             image={item.image}
             description={item.description}
             price={item.price}
-            link={type === "blog" ? "/blog" : "/shop"} // ✅ now type works
+            link={type === "blog" ? "/blog" : "/shop"}
           />
         ))}
       </div>
     </div>
   );
 };
+
 export default ParentSection;

@@ -7,7 +7,7 @@ import DashboardLayout from "./components/layout/dashboardlayout";
 import Dashboard from "./Page/Dashboard/dashboard";
 import Errorpage from "./components/error/error";
 import BlogPage from "./Page/Blog/BlogPage";
-import ShopPage from "./Page/Shop/ShopPage";
+import Shoppage from "./Page/Shop/Shoppage";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/about/login" element={<AboutPage />} />
             <Route path="/blog" element={<BlogPage />} />
-            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/shop" element={<Shoppage />} />
             <Route path="*" element={<Errorpage />} />
           </Route>
         </Route>

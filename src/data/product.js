@@ -18,12 +18,13 @@ const products = [
     price: 69.99,
     image: images,
   },
-   {
-    name: 'Amani',
-    description: 'A wonderful fragrance.',
-    price: 89.99,
-    image: images,
-  },
+  //    {
+  //   name: 'Amani',
+  //   description: 'A wonderful fragrance.',
+  //   price: 69.99,
+  //   image: images,
+  // },
+
   
 ];
 

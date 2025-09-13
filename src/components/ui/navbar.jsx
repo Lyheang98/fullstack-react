@@ -15,10 +15,10 @@ export default function Navbar() {
       path: "/about",
       subMenu: [
         { name: "Login", path: "/about/login" },
-        { name: "Mission", path: "/blog" },
+        { name: "Mission", path: "/" },
       ],
     },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact", path: "/" },
   ];
 
   return (
