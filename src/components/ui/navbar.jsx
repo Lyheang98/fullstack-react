@@ -22,12 +22,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow fixed w-full z-50">
-      <div className="max-w-full px-20">
+    <nav className="bg-white shadow fixed top-0 left-0 w-full z-50">
+      <div className="max-w-7xl mx-auto px-3">
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo + Search */}
           <div className="flex items-center space-x-10">
-            <Link to="/" className="text-2xl font-bold text-indigo-600">
+            <Link to="/" className="text-2xl font-bold text-red-900">
               Perfume
             </Link>
             <div className="relative">
@@ -65,16 +65,16 @@ export default function Navbar() {
                   onMouseEnter={() => setOpenDropdownIndex(index)}
                   onMouseLeave={() => setOpenDropdownIndex(null)}
                 >
-                  <span className="cursor-pointer text-gray-700 hover:text-indigo-600 font-medium">
+                  <span className="cursor-pointer text-gray-700 hover:text-red-900 font-medium">
                     {link.name}
                   </span>
                   {openDropdownIndex === index && (
-                    <div className="absolute top-8 left-0 bg-white shadow-md rounded-md w-40">
+                    <div className="absolute top-8 left-0 p-2 bg-white shadow rounded w-40">
                       {link.subMenu.map((sub) => (
                         <Link
                           key={sub.name}
                           to={sub.path}
-                          className="block px-4 py-2 text-gray-700 hover:bg-indigo-50"
+                          className="block px-4 py-2 text-gray-700 rounded hover:bg-red-900 hover:text-white"
                         >
                           {sub.name}
                         </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
+                  className="text-gray-700 hover:text-red-900 font-medium"
                 >
                   {link.name}
                 </Link>
@@ -98,7 +98,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <Link
               to="/login"
-              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+              className="px-4 py-2 bg-gradient-to-r from-black to-red-800 text-white rounded-lg hover:bg-indigo-700 transition"
             >
               Login
             </Link>
@@ -164,7 +164,7 @@ export default function Navbar() {
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block px-8 py-2 text-gray-600 hover:bg-indigo-50"
+                      className="block px-8 py-2 text-gray-600 hover:bg-red-500"
                     >
                       {sub.name}
                     </Link>
@@ -175,7 +175,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className="block px-4 py-2 border-b text-gray-700 hover:bg-indigo-50"
+                className="block px-4 py-2 border-b text-gray-700 hover:bg-red-50"
               >
                 {link.name}
               </Link>

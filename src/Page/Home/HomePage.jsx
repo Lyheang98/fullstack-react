@@ -5,12 +5,12 @@ import ParentSection from "../../components/ParentSection";
 import Blogpage from "../Blog/BlogPage";
 import Shoppage from "../Shop/Shoppage";
 
-const Homepage = ({ products = [], blogs = [] }) => {
+const Homepage = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden ">
       {/* Hero Section */}
-      <div className="grid lg:grid-cols-2 items-center w-10/12 mx-auto py-10 md:py-16 xl:py-20 gap-8">
-        {/* Left Content */}
+      <div className="grid lg:grid-cols-2 items-center w-10/12 mx-auto pt-6 pb-10 md:pt-8 md:pb-16 xl:pt-10 xl:pb-20">
+        {/* Left Content */}  
         <motion.div
           className="pr-2"
           initial={{ opacity: 0, x: -80 }}
@@ -18,7 +18,7 @@ const Homepage = ({ products = [], blogs = [] }) => {
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-blue-900"
+            className="text-3xl text-center md:text-4xl lg:text-5xl font-semibold text-red-900"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
@@ -29,7 +29,7 @@ const Homepage = ({ products = [], blogs = [] }) => {
           </motion.h1>
 
           <motion.p
-            className="py-4 md:py-6 text-lg text-gray-500 2xl:pr-5"
+            className="text-center py-4 md:py-6 text-lg text-gray-500 2xl:pr-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -38,10 +38,10 @@ const Homepage = ({ products = [], blogs = [] }) => {
             professional money planners...
           </motion.p>
 
-          <div className="mt-4">
+          <div className="mt-4 flex justify-center">
             <a
               href="#contact"
-              className="px-5 py-3 md:px-8 text-lg tracking-wider text-white bg-blue-500 rounded-lg hover:bg-blue-600 shadow-md transition-colors duration-300"
+              className="px-5 py-3 md:px-8 text-lg tracking-wider text-white bg-gradient-to-r from-black to-red-800 rounded-lg hover:bg-blue-600 shadow-md transition-colors duration-300"
             >
               Explore More
             </a>
@@ -66,12 +66,12 @@ const Homepage = ({ products = [], blogs = [] }) => {
           />
         </motion.div>
       </div>
-       <div>
-          <Blogpage />
-        </div>
-        <div>
-          <Shoppage />
-        </div>
+      <div>
+        <Blogpage />
+      </div>
+      <div>
+        <Shoppage />
+      </div>
     </div>
   );
 };

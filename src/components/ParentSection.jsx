@@ -1,7 +1,7 @@
 import React from "react";
 import CardComponent from "../components/ui/Cardcomponents";
  
-const ParentSection = ({ title, items = [] }) => {
+const ParentSection = ({ title, items = [], type }) => {
   if (!items.length) return null;
 
   return (
@@ -15,11 +15,11 @@ const ParentSection = ({ title, items = [] }) => {
             image={item.image}
             description={item.description}
             price={item.price}
+            link={type === "blog" ? "/blog" : "/shop"} // ✅ now type works
           />
         ))}
       </div>
     </div>
   );
 };
-
 export default ParentSection;
