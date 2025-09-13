@@ -10,7 +10,7 @@ const Homepage = () => {
     <div className="overflow-x-hidden ">
       {/* Hero Section */}
       <div className="grid lg:grid-cols-2 items-center w-10/12 mx-auto pt-6 pb-10 md:pt-8 md:pb-16 xl:pt-10 xl:pb-20">
-        {/* Left Content */}  
+        {/* Left Content */}
         <motion.div
           className="pr-2"
           initial={{ opacity: 0, x: -80 }}
@@ -66,13 +66,14 @@ const Homepage = () => {
           />
         </motion.div>
       </div>
-      <div>
+      <div >
         <Blogpage />
       </div>
-      <div>
+       <div>
         <Shoppage />
       </div>
     </div>
+
   );
 };
 
