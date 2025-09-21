@@ -8,7 +8,6 @@ export default function Navbar() {
   const navigationLinks = [
     { name: "Home", path: "/" },
     { name: "Blog", path: "/blog" },
-    { name: "Dashboard", path: "/dashboard" },
     { name: "Shop", path: "/shop" },
     {
       name: "About",
@@ -22,7 +21,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow fixed top-0 left-0 w-full z-50">
+    <nav className="bg-white shadow-2xs fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-3">
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo + Search */}
@@ -58,7 +57,7 @@ export default function Navbar() {
           {/* Center: Navigation Links */}
           <div className="hidden md:flex space-x-12 items-center">
             {navigationLinks.map((link, index) =>
-              link.subMenu ? (
+              link.subMenu ? ( 
                 <div
                   key={link.name}
                   className="relative"
