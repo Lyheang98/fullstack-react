@@ -19,7 +19,7 @@ const BlogContentSection = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            This is Blog Page
+            Branding
           </motion.h1>
 
           <motion.p
@@ -28,8 +28,8 @@ const BlogContentSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Empowering you to make better financial decisions. We truly are
-            professional money planners...
+            We are passionate about sharing our brand stories
+            and all Collection perfumes for Men and Women with you.
           </motion.p>
 
           <div className="mt-8 flex justify-center">

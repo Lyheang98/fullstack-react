@@ -23,7 +23,7 @@ const HeroSection = () => {
                             transition={{ duration: 1 }}
                         >
                             <span className="block text-5xl md:text-6xl">
-                                Get a financial experience
+                                Awaken Your Senses
                             </span>
                         </motion.h1>
 
@@ -33,8 +33,7 @@ const HeroSection = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 0.3 }}
                         >
-                            Empowering you to make better financial decisions. We truly are
-                            professional money planners...
+                            Discover timeless fragrances crafted to captivate, inspire, and define your unique essence.
                         </motion.p>
 
                         <div className="mt-4 flex justify-center">

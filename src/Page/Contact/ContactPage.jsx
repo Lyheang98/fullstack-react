@@ -1,10 +1,9 @@
 import React from "react";
+import ContactSection from "../../features/Home/ContactSection";
 const Contactpage = () =>{
     return (
         <div>
-            <h1 className="text-sm">
-                Hello this is Homepage
-            </h1>
+            <ContactSection />
         </div>
     )
 }

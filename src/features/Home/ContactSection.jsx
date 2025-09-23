@@ -41,11 +41,11 @@ const ContactSection = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-4xl font-bold text-gray-900 mb-4">
-          Enquire About Our <span className="text-red-800">Courses</span>
+          Enquire About Our <span className="text-red-800">Collection</span>
         </h1>
         <div className="w-20 h-1 bg-red-800 mx-auto mb-6"></div>
         <p className="text-base text-gray-600 max-w-3xl mx-auto">
-          We're here to help you begin your creative journey. Fill out the form
+          We're here to help you to choosing your own signature scent. Fill out the form
           below and our team will get back to you shortly.
         </p>
       </div>

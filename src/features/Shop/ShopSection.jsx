@@ -19,7 +19,7 @@ const ShopSection = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            This is Shop Page
+          Find your Signature !
           </motion.h1>
 
           <motion.p
@@ -28,8 +28,7 @@ const ShopSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Empowering you to make better financial decisions. We truly are
-            professional money planners...
+            Explore our curated collection of perfumes, each telling its own unique story through captivating scents.
           </motion.p>
 
           <div className="mt-8 flex justify-center">

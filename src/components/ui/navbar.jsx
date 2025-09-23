@@ -9,10 +9,10 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     {
       name: "Brand",
-      path: "/blog",
+      path: "/brand",
       subMenu: [
-        { name: "Male", path: "/error" },
-        { name: "Female", path: "/error" },
+        { name: "Men", path: "/error" },
+        { name: "Women", path: "/error" },
       ],
     },
     { name: "Shop", path: "/shop" },
@@ -24,7 +24,7 @@ export default function Navbar() {
         { name: "Mission", path: "/error" },
       ],
     },
-    { name: "Contact", path: "/error" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo */}
           <Link to="/" className="text-2xl font-bold text-red-900">
-            Perfume
+           Luxora 
           </Link>
 
           {/* Center: Search Bar */}
@@ -42,7 +42,8 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Search..."
-                className="pl-3 pr-10 py-2 border rounded-lg outline-none w-full"
+                className="pl-3 pr-10 py-2 border border-gray-300 rounded-lg outline-none w-full 
+               focus:ring-red-900 focus:border-red-900 transition"
               />
               <span className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500">
                 <svg
@@ -63,7 +64,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right: Navigation + Login */}
           {/* Right: Navigation + Login */}
           <div className="hidden md:flex items-center space-x-10 ">
             {navigationLinks.map((link, index) =>
@@ -127,8 +127,6 @@ export default function Navbar() {
               </svg>
             </Link>
           </div>
-
-
           {/* Mobile Hamburger */}
           <div className="flex items-center md:hidden">
             <button onClick={() => setMobileOpen(!mobileOpen)}>

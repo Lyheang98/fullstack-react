@@ -2,7 +2,7 @@ import React from "react";
 import BlogSection from "../../components/section/BlogSection";
 import BlogContentSection from "../../features/Blog/BlogContentSection";
 
-const Blogpage = () => {
+const Brandpage = () => {
   return (
     <div>
       <BlogContentSection />
@@ -11,4 +11,4 @@ const Blogpage = () => {
   );
 };
 
-export default Blogpage;
+export default Brandpage;

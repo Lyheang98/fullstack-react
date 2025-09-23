@@ -30,7 +30,7 @@ const ParentSection = ({ title, items = [], type, limit }) => {
           <CardComponent
             key={item.id || index}
             {...item} // spread props (name, image, description, price, etc.)
-            link={item.link || (type === "blog" ? `/blog/${item.id}` : `/shop/${item.id}`)}
+            link={item.link || (type === "brand" ? `/brand/${item.id}` : `/shop/${item.id}`)}
           />
         ))}
       </div>
