@@ -1,11 +1,10 @@
 import React from "react";
+import AboutSection from "../../features/About/AboutSection";
 
-const Aboutpage = () =>{
+const Aboutpage = () => {
     return (
         <div>
-            <h1 className="text-sm">
-                Hello this is Aboutpage
-            </h1>
+            <AboutSection />
         </div>
     )
 }

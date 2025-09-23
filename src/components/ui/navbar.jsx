@@ -7,17 +7,24 @@ export default function Navbar() {
 
   const navigationLinks = [
     { name: "Home", path: "/" },
-    { name: "Blog", path: "/blog" },
+    {
+      name: "Brand",
+      path: "/blog",
+      subMenu: [
+        { name: "Male", path: "/error" },
+        { name: "Female", path: "/error" },
+      ],
+    },
     { name: "Shop", path: "/shop" },
     {
       name: "About",
       path: "/about",
       subMenu: [
-        { name: "Login", path: "/about/login" },
-        { name: "Mission", path: "/" },
+        { name: "Login", path: "/error" },
+        { name: "Mission", path: "/error" },
       ],
     },
-    { name: "Contact", path: "/" },
+    { name: "Contact", path: "/error" },
   ];
 
   return (
@@ -29,7 +36,7 @@ export default function Navbar() {
             Perfume
           </Link>
 
-          {/* Center: Search Bar (visible on all except mobile menu) */}
+          {/* Center: Search Bar */}
           <div className="flex-1 justify-center px-6 hidden sm:flex md:justify-center">
             <div className="relative w-full max-w-sm">
               <input
@@ -57,7 +64,8 @@ export default function Navbar() {
           </div>
 
           {/* Right: Navigation + Login */}
-          <div className="hidden md:flex items-center space-x-10">
+          {/* Right: Navigation + Login */}
+          <div className="hidden md:flex items-center space-x-10 ">
             {navigationLinks.map((link, index) =>
               link.subMenu ? (
                 <div
@@ -66,16 +74,19 @@ export default function Navbar() {
                   onMouseEnter={() => setOpenDropdownIndex(index)}
                   onMouseLeave={() => setOpenDropdownIndex(null)}
                 >
-                  <span className="cursor-pointer text-gray-700 hover:text-red-900 font-medium px-2 py-1">
+                  <Link
+                    to={link.path}
+                    className="cursor-pointer text-gray-700 hover:text-red-900 font-medium px-2 py-1 inline-block"
+                  >
                     {link.name}
-                  </span>
+                  </Link>
                   {openDropdownIndex === index && (
-                    <div className="absolute top-8 left-0 p-2 bg-white shadow rounded w-40">
+                    <div className="absolute top-7 left-0 p-2 bg-white shadow-sm rounded-lg w-44 border border-gray-100 transition-all duration-200">
                       {link.subMenu.map((sub) => (
                         <Link
                           key={sub.name}
                           to={sub.path}
-                          className="block px-4 py-2 text-gray-700 rounded hover:bg-red-900 hover:text-white"
+                          className="block px-4 py-2 text-gray-700 rounded-md hover:bg-red-900 hover:text-white transition"
                         >
                           {sub.name}
                         </Link>
@@ -93,13 +104,30 @@ export default function Navbar() {
                 </Link>
               )
             )}
+
+            {/* Desktop Login with Icon */}
             <Link
               to="/login"
-              className="px-5 py-2 bg-gradient-to-r from-black to-red-800 text-white rounded-lg hover:opacity-90 transition"
+              className="flex items-center px-5 py-2 bg-gradient-to-r from-black to-red-800 text-white rounded-lg hover:opacity-90 transition"
             >
               Login
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4 ml-2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
             </Link>
           </div>
+
 
           {/* Mobile Hamburger */}
           <div className="flex items-center md:hidden">
@@ -146,7 +174,8 @@ export default function Navbar() {
           {navigationLinks.map((link, index) =>
             link.subMenu ? (
               <div key={link.name} className="border-b">
-                <span
+                <Link
+                  to={link.path}
                   onClick={() =>
                     setOpenDropdownIndex(
                       openDropdownIndex === index ? null : index
@@ -155,13 +184,13 @@ export default function Navbar() {
                   className="block px-4 py-3 text-gray-700 cursor-pointer font-medium"
                 >
                   {link.name}
-                </span>
+                </Link>
                 {openDropdownIndex === index &&
                   link.subMenu.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block px-8 py-2 text-gray-600 hover:bg-red-500 hover:text-white"
+                      className="block px-8 py-2 text-gray-600 hover:bg-red-500 hover:text-white transition"
                     >
                       {sub.name}
                     </Link>
@@ -178,15 +207,30 @@ export default function Navbar() {
             )
           )}
 
-          {/* Mobile Login only */}
+          {/* Mobile Login */}
           <div className="p-4">
             <Link
               to="/login"
-              className="block w-full text-center px-4 py-2 bg-gradient-to-r from-black to-red-800 text-white rounded-lg hover:opacity-90 transition"
+              className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-black to-red-800 text-white rounded-lg hover:opacity-90 transition"
             >
               Login
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4 ml-2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
             </Link>
           </div>
+
         </div>
       )}
     </nav>
