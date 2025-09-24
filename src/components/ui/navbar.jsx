@@ -28,7 +28,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+    <nav className="bg-white shadow-2xs fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo */}

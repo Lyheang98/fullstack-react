@@ -20,7 +20,7 @@ const ParentSection = ({ title, items = [], type, limit }) => {
       : "grid-cols-1 sm:grid-cols-2 md:grid-cols-4";
 
   return (
-    <div className="max-w-7xl mx-auto py-10 px-4">
+    <div className="max-w-7xl mx-auto py-5 px-4">
       {title && (
         <h2 className="text-2xl font-semibold mb-6 text-center">{title}</h2>
       )}
