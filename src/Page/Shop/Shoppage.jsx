@@ -1,9 +1,9 @@
 import React from "react";
 import ParentSection from "../../components/ParentSection";
 import products from "../../data/product";
-import MenSection from "../../features/Home/MenSection";
+import MenSection from "../../features/Shop/MenSection";
 import ShopSection from "../../features/Shop/ShopSection";
-import WomenSection from "../../features/Home/WomenSection";
+import WomenSection from "../../features/Shop/WomenSection";
 
 const Shoppage = () => {
   return (

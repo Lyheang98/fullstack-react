@@ -39,10 +39,6 @@ const VisionSection = () => {
                         className="flex flex-col items-center p-6 border border-gray-300 rounded-2xl bg-white shadow cursor-pointer max-h-64"
                         initial={{ opacity: 0, y: 20, scale: 0.95 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        whileHover={{
-                            scale: 1.03,
-                            borderColor: "#b91c1c",
-                        }}
                         viewport={{ once: true }}
                         transition={{ type: "spring", stiffness: 250, damping: 20 }}
                     >

@@ -1,13 +1,14 @@
 import React from "react";
-import MenSection from "../../features/Home/MenSection";
-import ShopSection from "../../features/Shop/ShopSection";
+import BrandSection from "../../features/Brand/BrandSection";
+import MenSection from "../../features/Shop/MenSection";
 
 
 const Brandpage = () => {
   return (
     <div>
-      <ShopSection />
+      <BrandSection />
       <MenSection />
+      
     </div>
   );
 };
