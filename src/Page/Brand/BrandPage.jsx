@@ -1,12 +1,13 @@
 import React from "react";
-import BlogSection from "../../components/section/BlogSection";
-import BlogContentSection from "../../features/Blog/BlogContentSection";
+import MenSection from "../../features/Home/MenSection";
+import ShopSection from "../../features/Shop/ShopSection";
+
 
 const Brandpage = () => {
   return (
     <div>
-      <BlogContentSection />
-      <BlogSection />
+      <ShopSection />
+      <MenSection />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import ParentSection from "../../components/ParentSection";
 import products from "../../data/product";
-const ShopSection = () => {
+const MenSection = () => {
   return (
     <div>
       <div className="container mx-auto py-5 ">
@@ -9,10 +9,10 @@ const ShopSection = () => {
           Men Stylish
         </h2>
         <p className="text-center"> this is a new prts for this summer </p>
-        <ParentSection items={products} type="shop" limit={3} />
+        <ParentSection items={products} type="Men" limit={3} />
       </div>
     </div>
   );
 };
 
-export default ShopSection;
+export default MenSection;

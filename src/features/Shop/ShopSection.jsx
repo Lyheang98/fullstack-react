@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const ShopSection = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden ">
       {/* Hero Section */}
-      <div className="flex flex-col items-center justify-center w-10/12 mx-auto pt-10 pb-16 md:pt-16 md:pb-20 xl:pt-20 xl:pb-28 text-center">
+      <div className="flex flex-col  items-center justify-center w-10/12 mx-auto pt-10 pb-16 md:pt-16 md:pb-20 xl:pt-20 xl:pb-28 text-center">
         {/* Centered Content */}
         <motion.div
           className="max-w-3xl"

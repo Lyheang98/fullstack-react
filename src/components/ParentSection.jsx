@@ -7,15 +7,15 @@ const ParentSection = ({ title, items = [], type, limit }) => {
   // Apply limit if provided, otherwise fallback by type
   const displayedItems = limit
     ? items.slice(0, limit)
-    : type === "shop"
+    : type === "Men"
     ? items.slice(0, 3)
-    : type === "blog"
+    : type === "Women"
     ? items.slice(0, 4)
     : items;
 
   // Responsive grid config
   const gridColsClass =
-    type === "shop"
+    type === "Men"
       ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
       : "grid-cols-1 sm:grid-cols-2 md:grid-cols-4";
 
